@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tender Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { padding-top: 150px; padding-bottom: 50px; border-bottom: 1px solid var(--border-color); }
+        .page-title { font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1.5rem; }
+        .hero-banner { width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius-lg); margin: 3rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .article-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+        .article-body h2 { font-size: 2rem; margin: 3rem 0 1rem; }
+        .article-body p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+        .article-body ul { margin-bottom: 2rem; padding-left: 1.5rem; }
+        .article-body li { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.8rem; }
+        .article-body strong { color: var(--text-main); }
+        .sidebar { position: sticky; top: 120px; }
+        .meta-box { background: var(--surface-color); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 2rem; }
+        .meta-box h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-main); }
+        .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tech-list span { padding: 0.5rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; }
+        @media (max-width: 1024px) {
+            .article-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-banner { height: 350px; }
+            .sidebar { position: static; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jaswanth.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </label>
+            
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header container">
+            <a href="index.html#projects" style="color: var(--text-muted); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <h1 class="page-title reveal-scale">Tender Management System</h1>
+            <div class="tags"><span>Web3</span><span>Blockchain Architecture</span></div>
+        </div>
+
+        <div class="container" style="padding-bottom: 6rem;">
+            <img src="images/web3_tender_cover.png" alt="Tender Management UI" class="hero-banner reveal-up">
+
+            <div class="article-grid">
+                <div class="article-body reveal-right">
+                    <h2>Project Overview</h2>
+                    <p>I built this Tender Management System because I wanted to see if I could completely eliminate fraud and bias from the standard bidding process. It's a fully decentralized application where every single interaction—like creating a tender or picking the winner—gets recorded permanently on the blockchain so no one can mess with it.</p>
+                    
+                    <h2>Architecture & Implementation</h2>
+                    <p>Building this required a really interesting bridge between standard web tools and a decentralized Ethereum backend.</p>
+                    <ul>
+                        <li><strong>Smart Contracts (Solidity):</strong> Instead of a normal server, all the core rules live directly on Ethereum. Things like checking if a bidder is eligible or opening sealed bids happen totally on autopilot.</li>
+                        <li><strong>Frontend Integration:</strong> I knew people wouldn't want to dig into code to bid, so I built a really clean React dashboard. <strong>Web3.js</strong> handles all the complex MetaMask wallet connections invisibly behind the scenes.</li>
+                        <li><strong>Decentralized Storage:</strong> Huge blueprint files are hashed and tossed into IPFS so they can never be quietly altered or deleted by a bad actor.</li>
+                        <li><strong>Node.js Middleware:</strong> A Node layer sits in the middle to link normal user accounts (OAuth) to their actual Web3 wallet signatures.</li>
+                    </ul>
+
+                    <h2>Impact & Outcomes</h2>
+                    <p>By enforcing an encrypted, decentralized workflow, the system fundamentally solves the "trust" issue in tender assignments. It guarantees that bids cannot be viewed early and that the rules of selection execute without any human intervention.</p>
+                </div>
+
+                <div class="sidebar reveal-left">
+                    <div class="meta-box">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-list">
+                            <span>Ethereum</span><span>Solidity</span><span>React.js</span><span>Web3.js</span><span>Node.js</span><span>IPFS</span><span>MetaMask</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <h3>Role & Scope</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Lead Fullstack Blockchain Engineer. Responsible for smart contract construction, auditing, and seamless frontend integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <div class="footer-brand">
+                <h2 class="logo">Jaswanth.</h2>
+                <p class="body-text" style="font-size: 0.9rem; margin-top: 0.5rem;">&copy; 2024 Built with Code & Logic.</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <a href="JaswanthG_Resume.pdf" download="JaswanthG_Resume.pdf" class="btn btn-outline">
+                    <span>Download CV</span> <i class="fas fa-file-pdf"></i>
+                </a>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/jaswanth1473" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jaswanth03/" target="_blank" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

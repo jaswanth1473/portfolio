@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise RAG | LLM Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { padding-top: 150px; padding-bottom: 50px; border-bottom: 1px solid var(--border-subtle); }
+        .page-title { font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 1rem; color: var(--text-main); }
+        .hero-banner { width: 100%; height: 500px; object-fit: cover; border-radius: 30px; margin: 3rem 0; box-shadow: var(--shadow-lg); background-position: center; border: 1px solid var(--border-subtle); animation: slide-in-bottom 1s cubic-bezier(var(--ease-smooth)) forwards; }
+        .article-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+        .article-body h2 { font-size: 2rem; margin: 3rem 0 1.5rem; color: var(--text-main); }
+        .article-body p { font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
+        .article-body ul { margin-bottom: 2.5rem; padding-left: 1.5rem; }
+        .article-body li { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; list-style-type: circle; }
+        .article-body strong { color: var(--text-main); font-weight: 600; }
+        .sidebar { position: sticky; top: 120px; }
+        .meta-box { background: var(--bg-surface); padding: 2rem; border-radius: 20px; border: 1px solid var(--border-subtle); margin-bottom: 2rem; box-shadow: var(--shadow-sm); }
+        .meta-box h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main); }
+        .tech-list { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .tech-list span { padding: 0.5rem 1rem; background: var(--bg-color); border: 1px solid var(--border-strong); border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
+        @media (max-width: 1024px) {
+            .article-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-banner { height: 350px; }
+            .sidebar { position: static; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jaswanth.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </label>
+            
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header container anim-mask">
+            <a href="index.html#projects" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <h1 class="page-title text-gradient">Enterprise RAG Assistant</h1>
+            <div class="tags" style="display: flex; gap: 0.5rem;">
+                <span style="font-weight: 600; font-size: 0.85rem; padding: 0.4rem 1rem; background: rgba(0, 122, 255, 0.1); color: var(--accent-base); border-radius: 50px;">Generative AI</span>
+                <span style="font-weight: 600; font-size: 0.85rem; padding: 0.4rem 1rem; background: rgba(0, 122, 255, 0.1); color: var(--accent-base); border-radius: 50px;">LLM Integration</span>
+            </div>
+        </div>
+
+        <div class="container" style="padding-bottom: 6rem;">
+            <img src="images/llm_rag_cover.png" alt="RAG Interface UI Blueprint" class="hero-banner anim-mask anim-delay-1">
+
+            <div class="article-grid">
+                <div class="article-body anim-mask anim-delay-2">
+                    <h2>Project Overview</h2>
+                    <p>Internal databases are sprawling repositories of unsearchable tribal knowledge. I architected this Retrieval-Augmented Generation (RAG) system to securely plug an advanced Language Model directly into proprietary business data, allowing users to rapidly "chat" with their enterprise databases without any hallucinations.</p>
+                    
+                    <h2>Architecture & Implementation</h2>
+                    <p>Building a robust AI assistant that does not leak private corporate data back to third-party trainers requires strict chunking, embeddings, and context-bounding patterns.</p>
+                    <ul>
+                        <li><strong>Vector Embeddings Pipelines:</strong> Built ingestion pipelines using Python to chunk large internal SQL datasets and PDFs into localized vector indices (ChromaDB), converting textual context into mathematical spaces.</li>
+                        <li><strong>LangChain Orchestration:</strong> Programed the orchestration layer using LangChain to intercept the user question, execute a highly rigorous similarity search over our private vectors, and securely append exactly three relevant sources.</li>
+                        <li><strong>Contextual Prompt Engineering:</strong> Crafted strictly bounded Meta-prompts compelling the OpenAI API to solely draw conclusions derived within the vector injections, completely halting unverified model hallucinations.</li>
+                        <li><strong>Secure FastAPI Handlers:</strong> Isolated the LLM generation keys strictly on a backend Python server avoiding exposed API requests entirely.</li>
+                    </ul>
+
+                    <h2>Impact & Outcomes</h2>
+                    <p>By enforcing a RAG execution flow rather than a simple API wrapper, the application acts as an omniscient corporate librarian capable of accurately querying thousands of localized documents. Time-to-retrieval for critical project data was exponentially reduced, fostering massive operational acceleration.</p>
+                </div>
+
+                <div class="sidebar anim-mask anim-delay-3">
+                    <div class="meta-box">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-list">
+                            <span>Python</span><span>LangChain</span><span>OpenAI gpt-4</span><span>ChromaDB</span><span>FastAPI</span><span>React</span><span>Pinecone</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <h3>Role & Scope</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Fullstack AI Engineer. Led the end-to-end integration mapping frontend interactions all the way through vector-search embeddings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <div class="footer-brand">
+                <h2 class="logo">Jaswanth.</h2>
+                <p class="body-text" style="font-size: 0.9rem; margin-top: 0.5rem;">&copy; 2024 Built with Code & Logic.</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <a href="JaswanthG_Resume.pdf" download="JaswanthG_Resume.pdf" class="btn btn-outline">
+                    <span>Download CV</span> <i class="fas fa-file-pdf"></i>
+                </a>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/jaswanth1473" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jaswanth03/" target="_blank" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

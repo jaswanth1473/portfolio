@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated ETL Pipeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { padding-top: 150px; padding-bottom: 50px; border-bottom: 1px solid var(--border-color); }
+        .page-title { font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1.5rem; }
+        .hero-banner { width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius-lg); margin: 3rem 0; box-shadow: 0 20px 40px rgba(0,0,0,0.06); background-position: center; }
+        .article-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+        .article-body h2 { font-size: 2rem; margin: 3rem 0 1rem; }
+        .article-body p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+        .article-body ul { margin-bottom: 2rem; padding-left: 1.5rem; }
+        .article-body li { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.8rem; }
+        .article-body strong { color: var(--text-main); }
+        .sidebar { position: sticky; top: 120px; }
+        .meta-box { background: var(--surface-color); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 2rem; }
+        .meta-box h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-main); }
+        .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tech-list span { padding: 0.5rem 1rem; background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; }
+        @media (max-width: 1024px) {
+            .article-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-banner { height: 350px; }
+            .sidebar { position: static; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jaswanth.</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </label>
+            
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header container">
+            <a href="index.html#projects" style="color: var(--text-muted); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <h1 class="page-title reveal-scale">Automated ETL Pipeline</h1>
+            <div class="tags"><span>Data Engineering</span><span>Architecture</span></div>
+        </div>
+
+        <div class="container" style="padding-bottom: 6rem;">
+            <img src="images/etl_pipeline_cover.png" alt="ETL Pipeline Architecture UI" class="hero-banner reveal-up">
+
+            <div class="article-grid">
+                <div class="article-body reveal-right">
+                    <h2>Project Overview</h2>
+                    <p>Dashboards are totally useless if the data feeding them is broken. I built this automated ETL pipeline to act as an unbreaking, scheduled heartbeat for an organization—constantly pulling messy public API data, performing heavy transformations on the fly, and flawlessly loading it into a data warehouse.</p>
+                    
+                    <h2>Architecture & Implementation</h2>
+                    <p>The data pipeline was fundamentally constructed to run completely invisibly in the background, reliably managing massive data inflows natively.</p>
+                    <ul>
+                        <li><strong>Orchestration (Apache Airflow):</strong> I used Airflow to ditch old-school Cron jobs and completely automate our daily data ingestion workflows, even programming in smart retries if an external API decides to rate-limit us.</li>
+                        <li><strong>Transformation (Python/Pandas):</strong> I wrote highly optimized Pandas calculations to tear apart and clean millions of messy JSON rows, correcting weird time formats and fixing null values at blazing speeds.</li>
+                        <li><strong>Data Warehouse Integration (PostgreSQL):</strong> The final, squeaky-clean data gets loaded gracefully into heavily normalized PostgreSQL tables designed specifically for lightning-fast dashboard reading.</li>
+                        <li><strong>Observation:</strong> I also wired up automatic Python logging scripts so that if anomalous data ever leaks through, our dashboards throw a warning flag immediately.</li>
+                    </ul>
+
+                    <h2>Impact & Outcomes</h2>
+                    <p>The resulting architecture absolutely slashes time-to-insight for data teams by hours each week. By abstracting the complex cleaning logic into a background orchestrator, the end dashboards are continually hydrated with guaranteed pristine data structures effortlessly.</p>
+                </div>
+
+                <div class="sidebar reveal-left">
+                    <div class="meta-box">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-list">
+                            <span>Apache Airflow</span><span>Python</span><span>PostgreSQL</span><span>Pandas</span><span>NumPy</span><span>SQL</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <h3>Role & Scope</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Lead Data Engineer. Architected the entire Extract-Transform-Load framework and built the underlying relational database queries handling output ingestions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <div class="footer-brand">
+                <h2 class="logo">Jaswanth.</h2>
+                <p class="body-text" style="font-size: 0.9rem; margin-top: 0.5rem;">&copy; 2024 Built with Code & Logic.</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <a href="JaswanthG_Resume.pdf" download="JaswanthG_Resume.pdf" class="btn btn-outline">
+                    <span>Download CV</span> <i class="fas fa-file-pdf"></i>
+                </a>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/jaswanth1473" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jaswanth03/" target="_blank" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

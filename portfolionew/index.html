@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaswanth Gondhi | Portfolio</title>
+    
+    <!-- Light Theme UI Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Redesigned High-End Checkbox Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jaswanth.G</a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </label>
+            
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                    <li><a href="#projects" class="nav-link">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span style="animation: slide-in-bottom 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0;">Building Intelligent</span>
+                        <span class="text-gradient" style="animation: slide-in-bottom 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s forwards; opacity: 0;">Systems & Applications.</span>
+                    </h1>
+                    <p class="hero-desc" style="animation: slide-in-bottom 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards; opacity: 0;">
+                        I am a Fullstack Software Engineer & Data Analyst crafting highly scalable architectures and embedding sophisticated LLMs into modern operational workflows.
+                    </p>
+                    <div style="animation: slide-in-bottom 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards; opacity: 0; display: inline-flex; gap: 1rem;">
+                        <a href="#projects" class="btn"><span>View Case Studies</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="circular-text">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path id="circlePath" d="M 50, 50 m -48, 0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0" fill="none" />
+                                <text font-size="5.5" font-weight="600" fill="currentColor" textLength="301" lengthAdjust="spacing">
+                                    <textPath href="#circlePath">jaswanth jaswanth jaswanth jaswanth jaswanth jaswanth jaswanth jaswanth jaswanth jaswanth </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="profile-img-inner">
+                            <img src="images/profile.PNG" alt="Jaswanth Gondhi">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container grid-2 anim-mask">
+                <div class="about-text">
+                    <h2 class="section-title">My <span class="text-gradient">Philosophy</span></h2>
+                    <p class="lead">Great software doesn't just process data—it interprets it.</p>
+                    <p class="body-text" style="margin-bottom: 1.5rem;">
+                        I build bridges between robust backend engineering, elegant frontend aesthetics, and high-level analytical intelligence. Recently, my focus has shifted heavily into Applied AI—understanding how to securely connect Large Language Models to internal databases, automating decision-making using Python pipelines, while persisting a beautiful and snappy frontend experience.
+                    </p>
+                    <div class="contact-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+                        <span><i class="fas fa-phone-alt"></i> +91 9600051572</span>
+                    </div>
+                </div>
+                
+                <div class="about-stats glass-card">
+                    <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Education</h3>
+                    <div class="ticket-stack">
+                        <div class="ticket">
+                            <div class="t-year">2021<br>2024</div>
+                            <div class="t-line"></div>
+                            <div class="t-info">
+                                <h4>B.Tech in Computer Science</h4>
+                                <span>SRM University</span>
+                            </div>
+                        </div>
+                        <div class="ticket">
+                            <div class="t-year">2018<br>2021</div>
+                            <div class="t-line"></div>
+                            <div class="t-info">
+                                <h4>Diploma in Electronics & Comm.</h4>
+                                <span>Panimalar Polytechnic College</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Expertise Section (Tri-Pillar Version) -->
+        <section class="section" id="expertise">
+            <div class="container">
+                <h2 class="section-title anim-mask">My <span class="text-gradient">Skills</span></h2>
+                <div class="accordion-gallery">
+                    
+                    <!-- Frontend -->
+                    <div class="acc-panel anim-mask" id="acc-front">
+                        <div class="acc-title-vertical">FRONTEND</div>
+                        <div class="acc-content">
+                            <i class="fas fa-laptop-code acc-icon"></i>
+                            <h3 class="acc-title">Frontend</h3>
+                            <div class="acc-pills">
+                                <span>React.js</span><span>HTML5</span><span>CSS3</span><span>UX/UI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="acc-panel anim-mask anim-delay-1" id="acc-back">
+                        <div class="acc-title-vertical">BACKEND</div>
+                        <div class="acc-content">
+                            <i class="fas fa-server acc-icon"></i>
+                            <h3 class="acc-title">Backend</h3>
+                            <div class="acc-pills">
+                                <span>Node.js</span><span>FastAPI</span><span>Django</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blockchain / Web3 -->
+                    <div class="acc-panel anim-mask anim-delay-2" id="acc-web3">
+                        <div class="acc-title-vertical">WEB3</div>
+                        <div class="acc-content">
+                            <i class="fab fa-ethereum acc-icon"></i>
+                            <h3 class="acc-title">Web3</h3>
+                            <div class="acc-pills">
+                                <span>Web3.js</span><span>Ethereum</span><span>Smart Contracts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & LLMs -->
+                    <div class="acc-panel anim-mask" id="acc-ai">
+                        <div class="acc-title-vertical">AI & LLMS</div>
+                        <div class="acc-content">
+                            <i class="fas fa-brain acc-icon"></i>
+                            <h3 class="acc-title">AI & LLMs</h3>
+                            <div class="acc-pills">
+                                <span>LangChain</span><span>OpenAI API</span><span>RAG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Science -->
+                    <div class="acc-panel anim-mask anim-delay-1" id="acc-data">
+                        <div class="acc-title-vertical">DATA SCI</div>
+                        <div class="acc-content">
+                            <i class="fas fa-atom acc-icon"></i>
+                            <h3 class="acc-title">Data Science</h3>
+                            <div class="acc-pills">
+                                <span>Machine Learning</span><span>Computer Vision</span><span>NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Analytics -->
+                    <div class="acc-panel anim-mask anim-delay-2" id="acc-analytics">
+                        <div class="acc-title-vertical">ANALYTICS</div>
+                        <div class="acc-content">
+                            <i class="fas fa-chart-bar acc-icon"></i>
+                            <h3 class="acc-title">Analytics</h3>
+                            <div class="acc-pills">
+                                <span>Pandas</span><span>Scikit-Learn</span><span>Tableau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database & Tools -->
+                    <div class="acc-panel anim-mask anim-delay-3" id="acc-tools">
+                        <div class="acc-title-vertical">TOOLS</div>
+                        <div class="acc-content">
+                            <i class="fas fa-database acc-icon"></i>
+                            <h3 class="acc-title">Tools/DB</h3>
+                            <div class="acc-pills">
+                                <span>PostgreSQL</span><span>MongoDB</span><span>Airflow</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase -->
+        <section class="section" id="projects" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+            <div class="container">
+                <h2 class="section-title anim-mask" style="margin-bottom: 4rem;">Selected <span class="text-gradient">Work</span></h2>
+                
+                <div class="project-showcase">
+                    
+                    <!-- NEW LLM PROJECT -->
+                    <a href="project-llm.html" class="p-card anim-mask hover-3d">
+                        <div class="p-img-box"><img src="images/llm_rag_cover.png" alt="Enterprise RAG Interface"></div>
+                        <div class="p-content">
+
+                            <h3 class="p-title">Enterprise RAG Assistant</h3>
+                            <p class="p-desc">An advanced intelligent layer that strictly interrogates private company databases using LangChain and OpenAI, virtually eliminating hallucination risks in queries.</p>
+                            <span class="p-link">View Case Study <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Existing Project Replacements with New Markup -->
+                    <a href="project-tender.html" class="p-card anim-mask anim-delay-1 hover-3d">
+                        <div class="p-img-box"><img src="images/web3_tender_cover.png" alt="Tender Management"></div>
+                        <div class="p-content">
+
+                            <h3 class="p-title">Tender Management System</h3>
+                            <p class="p-desc">A fraud-proof decentralized application leveraging Ethereum smart contracts to manage vendor bidding pipelines immutably.</p>
+                            <span class="p-link">View Case Study <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="project-workout.html" class="p-card anim-mask hover-3d">
+                        <div class="p-img-box"><img src="images/ai_workout_cover.png" alt="AI Workout"></div>
+                        <div class="p-content">
+
+                            <h3 class="p-title">Adaptive AI Workout Builder</h3>
+                            <p class="p-desc">A predictive analysis engine acting as a digital personal trainer, adapting routines on-the-fly via Scikit-Learn Naive Bayes classifiers.</p>
+                            <span class="p-link">View Case Study <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="project-task.html" class="p-card anim-mask anim-delay-1 hover-3d">
+                        <div class="p-img-box"><img src="images/task_manager_cover.png" alt="Fullstack Task Manager"></div>
+                        <div class="p-content">
+
+                            <h3 class="p-title">Fullstack Task Manager</h3>
+                            <p class="p-desc">Collaborative Kanban boards utilizing Socket.io for instantaneous UI updates without refreshing, locking state concurrently.</p>
+                            <span class="p-link">View Case Study <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="project-etl.html" class="p-card anim-mask hover-3d">
+                        <div class="p-img-box"><img src="images/etl_pipeline_cover.png" alt="Automated ETL"></div>
+                        <div class="p-content">
+
+                            <h3 class="p-title">Automated ETL Orchestration</h3>
+                            <p class="p-desc">A self-healing Apache Airflow automation fetching, sanitizing, and warehousing millions of API rows purely autonomously.</p>
+                            <span class="p-link">View Case Study <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Details -->
+        <section class="section" id="experience">
+            <div class="container">
+                <h2 class="section-title anim-mask" style="margin-bottom: 4rem;">Professional <span class="text-gradient">Journey</span></h2>
+                
+                <div class="exp-grid">
+                    <!-- Card 1 -->
+                    <div class="exp-card anim-mask hover-3d">
+                        <div class="exp-card-header">
+                            <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                            <span class="exp-date">Sep 2025 - Present</span>
+                        </div>
+                        <h3 class="exp-title">Associate</h3>
+                        <span class="exp-company">Eenadu Digital</span>
+                        <p class="exp-desc">Developed and maintained scalable full-stack web applications using Python and modern frontend architectures. Collaborated with engineering teams to design robust REST API integrations, optimize complex database queries, and improve overall system performance across core digital media platforms.</p>
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="exp-card anim-mask anim-delay-1 hover-3d">
+                        <div class="exp-card-header">
+                            <div class="exp-icon"><i class="fas fa-chart-line"></i></div>
+                            <span class="exp-date">Mar 2024 - May 2025</span>
+                        </div>
+                        <h3 class="exp-title">Junior Data Analyst Intern</h3>
+                        <span class="exp-company">Trueinfineworx</span>
+                        <p class="exp-desc">Extracted, cleaned, and analyzed large-scale raw datasets to uncover actionable operational insights. Designed automated reporting pipelines using Python and SQL, and built interactive data visualizations in Power BI to accelerate executive decision-making.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-wrap">
+            <div class="footer-brand">
+                <h2 class="logo">Jaswanth.G</h2>
+                <p class="body-text" style="font-size: 0.9rem; margin-top: 0.5rem;">&copy; 2024 Built with Code & Logic.</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <a href="JaswanthG-Resume.pdf" download="JaswanthG-Resume.pdf" class="btn btn-outline">
+                    <span>Download CV</span> <i class="fas fa-file-pdf"></i>
+                </a>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/jaswanth1473" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jaswanth03/" target="_blank" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:gondhijaswanth7@gmail.com" class="icon-btn"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
